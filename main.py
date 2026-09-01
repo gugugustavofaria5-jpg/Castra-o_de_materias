@@ -36,11 +36,15 @@ def cadastrar_tarefa():
     # Validação de pré-requisito: verifica se existe pelo menos uma matéria cadastrada
     if not lista_materias:
         print("\nAviso: Você ainda não cadastrou nenhuma matéria!")
+        return
 
     print("\n--- Cadastração de tarefas ---")
     # Coleta os dados da tarefa via input do usuário
     nome_tarefa = input("Digite o nome da tarefa: ").strip()
     materia_tarefa = input("Digite a materia que você quer: ").strip()
+    if materia_tarefa not in lista_materias:
+        print("Erro: Essa matéria não existe! Cadastre ela primeiro.")
+
     prioridade = input("Digite a prioridade que você quer: ").strip()
 
     # Validação de campo obrigatório (nome da tarefa)
