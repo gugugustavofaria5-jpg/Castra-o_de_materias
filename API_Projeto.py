@@ -15,4 +15,3 @@ def salvar_placar(dados: PlacasJogo):
         "jogador_recebido": dados.jogador,
         "pontos_recebidos": dados.pontos
     }
-
